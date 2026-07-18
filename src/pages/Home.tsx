@@ -25,6 +25,10 @@ const projects = [
 function Home() {
   const [scrollProgress, setScrollProgress] = useState(0)
 
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   useEffect(() => {
     const updateProgress = () => {
       const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight
@@ -66,12 +70,12 @@ function Home() {
 
       <div className="relative z-10 mx-auto w-[calc(100%-2rem)] max-w-[1180px] sm:w-[calc(100%-3rem)]">
         <nav className="flex items-center justify-between py-7" aria-label="Main navigation">
-          <a className="brand-mark text-lg font-bold tracking-[-0.05em] no-underline" href="#top">
+          <button className="brand-mark text-lg font-bold tracking-[-0.05em]" type="button" onClick={() => scrollToSection('top')}>
             Tarik<span className="text-accent">.</span>
-          </a>
-          <a className="nav-link font-mono text-xs font-bold tracking-[0.1em] text-muted uppercase" href="#contact">
+          </button>
+          <button className="nav-link font-mono text-xs font-bold tracking-[0.1em] text-muted uppercase" type="button" onClick={() => scrollToSection('contact')}>
             Let&apos;s talk <span aria-hidden="true">↗</span>
-          </a>
+          </button>
         </nav>
 
         <section id="top" className="hero-section flex min-h-[calc(100vh-84px)] flex-col justify-center py-20">
@@ -90,12 +94,12 @@ function Home() {
           </p>
 
           <div className="hero-actions mt-10 flex flex-wrap gap-3">
-            <a className="button-primary rounded-full px-5 py-3 text-sm font-bold no-underline" href="#projects">
+            <button className="button-primary rounded-full px-5 py-3 text-sm font-bold" type="button" onClick={() => scrollToSection('projects')}>
               View my projects <span aria-hidden="true">↓</span>
-            </a>
-            <a className="button-secondary rounded-full px-5 py-3 text-sm font-bold no-underline" href="#about">
+            </button>
+            <button className="button-secondary rounded-full px-5 py-3 text-sm font-bold" type="button" onClick={() => scrollToSection('about')}>
               More about me
-            </a>
+            </button>
           </div>
         </section>
 
@@ -157,7 +161,7 @@ function Home() {
               rel="noreferrer"
               aria-label="Visit Tarik Šuta's GitHub profile"
             >
-              <svg className="size-4" aria-hidden="true"><use href="/icons.svg#github-icon" /></svg>
+              <svg className="size-4" aria-hidden="true"><use href={`${import.meta.env.BASE_URL}icons.svg#github-icon`} /></svg>
               GitHub
             </a>
           </div>

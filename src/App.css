@@ -107,7 +107,13 @@
 .ambient-two { top: 54vh; left: -15rem; background: #247c5a; animation: float-two 21s ease-in-out infinite; }
 .ambient-three { right: 30vw; bottom: -20rem; background: #6ab556; animation: float-one 24s ease-in-out -8s infinite reverse; }
 
-.brand-mark, .nav-link { transition: color 220ms ease, transform 220ms ease; }
+.brand-mark, .nav-link {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  transition: color 220ms ease, transform 220ms ease;
+}
 .brand-mark:hover { color: var(--color-accent); transform: translateY(-2px); }
 .nav-link:hover { color: var(--color-accent); }
 .nav-link span { display: inline-block; transition: transform 220ms ease; }
@@ -123,6 +129,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
+  font: inherit;
   transition: transform 240ms cubic-bezier(.2,.8,.2,1), background-color 240ms ease, border-color 240ms ease, color 240ms ease, box-shadow 240ms ease;
 }
 
