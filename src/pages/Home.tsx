@@ -81,7 +81,7 @@ function Home() {
           </p>
 
           <h1 className="hero-title max-w-4xl text-5xl leading-[0.94] font-medium tracking-[-0.07em] text-ink sm:text-7xl lg:text-8xl">
-            Hey, I&apos;m Tarik Šuta. I build things for the <span className="text-accent">web.</span>
+            Hey, I&apos;m Tarik Šuta. <span className="block">I build things for the <span className="text-accent">web.</span></span>
           </h1>
 
           <p className="hero-copy mt-7 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
