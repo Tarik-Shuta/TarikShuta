@@ -7,18 +7,21 @@ const projects = [
     description:
       'UrbanMove is a full-stack electric scooter rental platform that enables users to locate, rent, and manage scooter rides through a modern web application.',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Node.JS', 'Express.JS', 'PostgreSQL'],
+    repositoryUrl: 'https://github.com/Tarik-Shuta/UrbanMove',
   },
   {
     number: '02',
     title: 'EClubs',
     description: 'EClubs is a web-based student club management platform that streamlines club operations through automated attendance tracking, activity management, and centralized access to club information for students and administrators.',
     tags: ['Vue', 'Tailwind CSS', 'TypeScript', 'PrimeVue'],
+    repositoryUrl: 'https://github.com/VenomTS/EClubs-Frontend',
   },
   {
     number: '03',
     title: 'Number Guessing Game',
     description: 'Number Guessing Game is a console-based game developed in Assembly language where players guess a randomly generated number with feedback after each attempt.',
     tags: ['Assembly'],
+    repositoryUrl: 'https://github.com/Tarik-Shuta/Number-Guessing-Game-Assembly',
   },
 ]
 
@@ -85,7 +88,7 @@ function Home() {
           </p>
 
           <h1 className="hero-title max-w-4xl text-5xl leading-[0.94] font-medium tracking-[-0.07em] text-ink sm:text-7xl lg:text-8xl">
-            Hey, I&apos;m Tarik Šuta. <span className="block">I build things for the <span className="text-accent">web.</span></span>
+            Hey, I&apos;m Tarik Šuta <span className="block"> and I turn ideas into  <span className="text-accent">software.</span></span>
           </h1>
 
           <p className="hero-copy mt-7 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
@@ -126,6 +129,18 @@ function Home() {
                     </li>
                   ))}
                 </ul>
+                {project.repositoryUrl && (
+                  <a
+                    className="relative mt-8 inline-flex size-10 items-center justify-center rounded-full border border-white/10 text-muted transition-colors hover:border-accent hover:bg-accent hover:text-canvas focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    href={project.repositoryUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`View ${project.title} on GitHub`}
+                    title="View repository on GitHub"
+                  >
+                    <svg className="size-5" aria-hidden="true"><use href={`${import.meta.env.BASE_URL}icons.svg#github-icon`} /></svg>
+                  </a>
+                )}
               </article>
             ))}
           </div>
