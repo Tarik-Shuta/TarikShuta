@@ -11,14 +11,14 @@ const projects = [
   {
     number: '02',
     title: 'EClubs',
-    description: 'Use this space to briefly explain the product, your contribution, and the result.',
+    description: 'EClubs is a web-based student club management platform that streamlines club operations through automated attendance tracking, activity management, and centralized access to club information for students and administrators.',
     tags: ['Vue', 'Tailwind CSS', 'TypeScript', 'PrimeVue'],
   },
   {
     number: '03',
-    title: 'Project name',
-    description: 'Add another project that shows a different skill or the kind of work you want to do more of.',
-    tags: ['Python', 'UI/UX', 'Full stack'],
+    title: 'Number Guessing Game',
+    description: 'Number Guessing Game is a console-based game developed in Assembly language where players guess a randomly generated number with feedback after each attempt.',
+    tags: ['Assembly'],
   },
 ]
 
