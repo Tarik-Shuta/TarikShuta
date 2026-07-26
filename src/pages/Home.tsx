@@ -71,12 +71,12 @@ function Home() {
       <div className="ambient ambient-two" aria-hidden="true" />
       <div className="ambient ambient-three" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto w-[calc(100%-2rem)] max-w-[1180px] sm:w-[calc(100%-3rem)]">
+      <div className="relative z-10 mx-auto w-[calc(100%-2rem)] max-w-295 sm:w-[calc(100%-3rem)]">
         <nav className="flex items-center justify-between py-7" aria-label="Main navigation">
-          <button className="brand-mark text-lg font-bold tracking-[-0.05em]" type="button" onClick={() => scrollToSection('top')}>
+          <button className="brand-mark text-lg font-bold tracking-tighter" type="button" onClick={() => scrollToSection('top')}>
             Tarik<span className="text-accent">.</span>
           </button>
-          <button className="nav-link font-mono text-xs font-bold tracking-[0.1em] text-muted uppercase" type="button" onClick={() => scrollToSection('contact')}>
+          <button className="nav-link font-mono text-xs font-bold tracking-widest text-muted uppercase" type="button" onClick={() => scrollToSection('contact')}>
             Let&apos;s talk <span aria-hidden="true">↗</span>
           </button>
         </nav>
@@ -120,11 +120,11 @@ function Home() {
               <article key={project.number} className="project-card group relative overflow-hidden rounded-2xl border border-white/10 bg-surface p-7 sm:p-8">
                 <div className="card-orb absolute -right-16 -bottom-20 size-52 rounded-full bg-evergreen/30 blur-sm" />
                 <p className="relative font-mono text-xs text-accent">{project.number}</p>
-                <h3 className="relative mt-14 text-2xl font-medium tracking-[-0.05em]">{project.title}</h3>
+                <h3 className="relative mt-14 text-2xl font-medium tracking-tighter">{project.title}</h3>
                 <p className="relative mt-3 leading-relaxed text-muted">{project.description}</p>
                 <ul className="relative mt-7 flex flex-wrap gap-2" aria-label="Technologies used">
                   {project.tags.map((tag) => (
-                    <li key={tag} className="tech-tag rounded-md border border-white/10 bg-white/[0.025] px-2 py-1 font-mono text-[0.68rem] text-muted">
+                    <li key={tag} className="tech-tag rounded-md border border-white/10 bg-white/2.5 px-2 py-1 font-mono text-[0.68rem] text-muted">
                       {tag}
                     </li>
                   ))}
@@ -184,7 +184,6 @@ function Home() {
 
         <footer className="flex flex-col gap-3 border-t border-white/10 py-7 text-xs text-faint sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Tarik Šuta</p>
-          <p>Built with React &amp; Tailwind CSS</p>
         </footer>
       </div>
     </main>
