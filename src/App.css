@@ -16,7 +16,35 @@
   --color-accent-bright: #c3ff9b;
   --color-evergreen: #1f5a43;
 }
+@keyframes float-one {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 
+  to {
+    transform: translate3d(10rem, 7rem, 0) scale(1.15);
+  }
+}
+
+@keyframes float-two {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(-10rem, 6rem, 0) scale(1.1);
+  }
+}
+
+@keyframes float-three {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(8rem, -8rem, 0) scale(1.15);
+  }
+}
 @layer base {
   html {
     min-width: 320px;
